@@ -1,0 +1,29 @@
+{
+  "rules": {
+    "merchants": {
+      "$uid": {
+        ".read": "auth != null && auth.uid === $uid",
+        ".write": "auth != null && auth.uid === $uid"
+      }
+    },
+    "sessions": {
+      "$merchantId": {
+        ".read": "auth != null && auth.uid === $merchantId",
+        "$sessionId": {
+          ".read": "true",
+          ".write": "true",
+          ".validate": "newData.hasChildren(['sessionId', 'refCode', 'amount', 'timestamp'])"
+        }
+      }
+    },
+    "telemetry": {
+      "$merchantId": {
+        ".read": "auth != null && auth.uid === $merchantId",
+        "$sessionId": {
+          ".read": "auth != null && auth.uid === $merchantId",
+          ".write": "true"
+        }
+      }
+    }
+  }
+}

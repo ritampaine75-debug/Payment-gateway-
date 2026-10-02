@@ -1,0 +1,6 @@
+{
+  "name": "Dynamic UPI Gateway & Analytics Platform",
+  "description": "Production-grade Dynamic UPI Gateway with cryptographic tamper-proof payment links, real-time live telemetry, anti-bypass security, and merchant analytics dashboard.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
